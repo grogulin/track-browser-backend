@@ -16,5 +16,5 @@ RUN npm i
 COPY . ./
 
 # start app
-CMD ["npm", "start"]
+CMD ["npm", "start", "> /dev/null"]
 # CMD ["node", "app.js"]
