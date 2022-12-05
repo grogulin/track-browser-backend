@@ -18,5 +18,5 @@ COPY . ./
 
 # start app
 # CMD ["npm", "start"]
-CMD ["pm2", "start", "app.js"]
+CMD ["pm2", "start", "bin/www"]
 # CMD ["node", "app.js"]
