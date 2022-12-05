@@ -11,10 +11,12 @@ COPY package.json ./
 COPY package-lock.json ./
 RUN npm i
 # EXPOSE 80
+EXPOSE 9900
 
 # add app
 COPY . ./
 
 # start app
-CMD ["npm", "start", "> /dev/null"]
+# CMD ["npm", "start"]
+CMD ["pm2", "start", "app.js"]
 # CMD ["node", "app.js"]
