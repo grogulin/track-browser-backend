@@ -17,6 +17,6 @@ EXPOSE 9900
 COPY . ./
 
 # start app
-CMD ["npm", "start"]
+CMD ["npm", "start", "& > mylog.out"]
 # CMD ["pm2", "start", "bin/www"]
 # CMD ["node", "app.js"]

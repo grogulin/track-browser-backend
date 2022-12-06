@@ -26,6 +26,7 @@ const getTracks = (request, response) => {
         throw error
       }
       response.send(results)
+
     })
   } else {
     console.log("No params :(")
@@ -34,13 +35,15 @@ const getTracks = (request, response) => {
         throw error
       }
       response.send(results)
+
     })
   }
+  
 
   
 }
 
-/* GET home page. */
+/* GET tracks page. */
 router.get('/', getTracks);
 
 module.exports = router;
