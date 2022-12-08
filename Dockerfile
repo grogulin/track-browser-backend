@@ -17,11 +17,9 @@ EXPOSE 9900
 
 # add app
 COPY . ./
-RUN CD node_modules/
-RUN ls
-RUN npm list
+CMD ["npm", "list"]
 
 # start app
 # CMD ["npm", "start", "& > mylog.out"]
-CMD ["pm2", "start", "./bin/www"]
+# CMD ["pm2", "start", "./bin/www"]
 # CMD ["node", "app.js"]
