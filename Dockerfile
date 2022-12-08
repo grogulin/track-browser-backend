@@ -17,7 +17,7 @@ EXPOSE 9900
 
 # add app
 COPY . ./
-# CMD ["npm", "list"]
+RUN npm install pm2
 
 # start app
 # CMD ["npm", "start", "& > mylog.out"]
