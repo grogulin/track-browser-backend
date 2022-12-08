@@ -18,5 +18,5 @@ COPY . ./
 
 # start app
 # CMD ["npm", "start", "& > mylog.out"]
-CMD ["pm2", "start", "bin/www"]
+CMD ["pm2", "start", "./bin/www"]
 # CMD ["node", "app.js"]
