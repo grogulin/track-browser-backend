@@ -11,13 +11,15 @@ ENV PATH /app/node_modules/.bin:$PATH
 # COPY package.json ./
 # COPY package-lock.json ./
 COPY package*.json ./
-RUN npm install --production
+RUN npm install
 # EXPOSE 80
 EXPOSE 9900
 
 # add app
 COPY . ./
+RUN CD node_modules/
 RUN ls
+RUN npm list
 
 # start app
 # CMD ["npm", "start", "& > mylog.out"]
