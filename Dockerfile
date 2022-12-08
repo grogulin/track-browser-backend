@@ -9,7 +9,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install application dependencies
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm i
+RUN npm install
 # EXPOSE 80
 EXPOSE 9900
 
