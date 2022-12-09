@@ -2,14 +2,10 @@ const { response } = require('express');
 var express = require('express');
 var router = express.Router();
 
-const mysql = require('mysql')
+const mysql = require('mysql');
+const dbConfig = require('../config/connection-config');
+const connection = mysql.createConnection(dbConfig)
 
-const connection = mysql.createConnection({
-  host: '5.61.61.212',
-  user: 'readonly',
-  password: '123test123',
-  database: 'f1'
-})
 
 
 const getTracks = (request, response) => {
@@ -37,10 +33,7 @@ const getTracks = (request, response) => {
       response.send(results)
 
     })
-  }
-  
-
-  
+  }  
 }
 
 /* GET tracks page. */

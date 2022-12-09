@@ -43,7 +43,7 @@ const getDrivers = (request, response) => {
   
 }
 
-/* GET tracks page. */
+/* GET drivers page. */
 router.get('/', getDrivers);
 
 module.exports = router;
