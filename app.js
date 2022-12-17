@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 var tracksRouter = require('./routes/tracks');
 var driversRouter = require('./routes/drivers');
 
-var cors = require(cors);
+const cors = require('cors');
 
 var app = express();
 
