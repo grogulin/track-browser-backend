@@ -1,10 +1,12 @@
-FROM keymetrics/pm2:latest-stretch
+# FROM keymetrics/pm2:latest-stretch
+FROM node:slim
 
 # Bundle APP files
 COPY . ./
 
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
+RUN node --version
 RUN npm install
 RUN sudo -E env "PATH=$PATH" n stable
 
