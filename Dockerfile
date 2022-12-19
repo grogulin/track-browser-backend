@@ -8,7 +8,6 @@ COPY . ./
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN node --version
 RUN npm install
-RUN sudo -E env "PATH=$PATH" n stable
 
 # Expose the listening port of your app
 EXPOSE 9900
@@ -16,4 +15,5 @@ EXPOSE 9900
 # Show current folder structure in logs
 RUN ls -al -R
 
-CMD [ "pm2-runtime", "start", "./bin/www" ]
+# CMD [ "pm2-runtime", "start", "./bin/www" ]
+CMD ["npm", "start"]
