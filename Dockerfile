@@ -6,7 +6,7 @@ COPY . ./
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN npm install
-RUN sudo n stable
+RUN sudo -E env "PATH=$PATH" n stable
 
 # Expose the listening port of your app
 EXPOSE 9900
